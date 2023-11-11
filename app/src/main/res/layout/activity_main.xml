@@ -6,9 +6,4 @@
     android:layout_height="match_parent"
     tools:context=".app.presentation.MainActivity">
 
-    <com.jjoe64.graphview.GraphView
-        android:id="@+id/graphView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

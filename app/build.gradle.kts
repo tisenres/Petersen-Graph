@@ -61,6 +61,4 @@ dependencies {
     implementation("io.insert-koin:koin-core:$koinAndroidVersion")
     implementation("io.insert-koin:koin-test:$koinAndroidVersion")
 
-    implementation("com.jjoe64:graphview:4.2.2")
-
 }

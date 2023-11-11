@@ -1,5 +1,6 @@
 package com.example.petersengraph2.app.presentation
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.petersengraph2.domain.CreateEdgeSetUseCase
 import com.example.petersengraph2.domain.CreateVerticesSetUseCase
@@ -11,21 +12,20 @@ class MainActivityVM(
     private val createEdgeSetUseCase: CreateEdgeSetUseCase
 ): ViewModel() {
 
-    private lateinit var verticesSet: Set<Vertex>
-    private lateinit var edgeSet: Set<Edge>
+    val verticesLiveData: MutableLiveData<Set<Vertex>> = MutableLiveData()
+    val edgeLiveData: MutableLiveData<Set<Edge>> = MutableLiveData()
 
-    fun getVertices(): Set<Vertex> {
-        verticesSet.let {
-            verticesSet = createVerticesSetUseCase.execute()
-        }
-        return verticesSet
+    fun execute() {
+        initVerticesLiveData()
+        initEdgeLiveData()
     }
 
-    fun getEdges(): Set<Edge> {
-        edgeSet.let {
-            edgeSet = createEdgeSetUseCase.execute(getVertices())
-        }
-        return edgeSet
+    private fun initVerticesLiveData() {
+        verticesLiveData.value = createVerticesSetUseCase.execute()
+    }
+
+    private fun initEdgeLiveData() {
+        edgeLiveData.value = createEdgeSetUseCase.execute(verticesSet = verticesLiveData.value!!)
     }
 
 }

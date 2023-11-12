@@ -36,6 +36,10 @@
         "source": "/Users/tisenres/.gradle/daemon/8.0/com.example.petersengraph2.app-main-39:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
+        "merged": "/Users/tisenres/.gradle/daemon/8.0/com.example.petersengraph2.app-merged_res-37:/layout_fragment_graph.xml.flat",
+        "source": "/Users/tisenres/.gradle/daemon/8.0/com.example.petersengraph2.app-main-39:/layout/fragment_graph.xml"
+    },
+    {
         "merged": "/Users/tisenres/.gradle/daemon/8.0/com.example.petersengraph2.app-merged_res-37:/mipmap-mdpi_ic_launcher.webp.flat",
         "source": "/Users/tisenres/.gradle/daemon/8.0/com.example.petersengraph2.app-main-39:/mipmap-mdpi/ic_launcher.webp"
     },

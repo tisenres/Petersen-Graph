@@ -4,20 +4,43 @@ package com.example.petersengraph2.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.FragmentContainerView;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.petersengraph2.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
 
-  private ActivityMainBinding(@NonNull ConstraintLayout rootView) {
+  @NonNull
+  public final Button createGraphBtn;
+
+  @NonNull
+  public final FragmentContainerView fragmentContainerViewTag;
+
+  @NonNull
+  public final EditText inputK;
+
+  @NonNull
+  public final EditText inputN;
+
+  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button createGraphBtn,
+      @NonNull FragmentContainerView fragmentContainerViewTag, @NonNull EditText inputK,
+      @NonNull EditText inputN) {
     this.rootView = rootView;
+    this.createGraphBtn = createGraphBtn;
+    this.fragmentContainerViewTag = fragmentContainerViewTag;
+    this.inputK = inputK;
+    this.inputN = inputN;
   }
 
   @Override
@@ -43,10 +66,38 @@ public final class ActivityMainBinding implements ViewBinding {
 
   @NonNull
   public static ActivityMainBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.createGraphBtn;
+      Button createGraphBtn = ViewBindings.findChildViewById(rootView, id);
+      if (createGraphBtn == null) {
+        break missingId;
+      }
 
-    return new ActivityMainBinding((ConstraintLayout) rootView);
+      id = R.id.fragment_container_view_tag;
+      FragmentContainerView fragmentContainerViewTag = ViewBindings.findChildViewById(rootView, id);
+      if (fragmentContainerViewTag == null) {
+        break missingId;
+      }
+
+      id = R.id.inputK;
+      EditText inputK = ViewBindings.findChildViewById(rootView, id);
+      if (inputK == null) {
+        break missingId;
+      }
+
+      id = R.id.inputN;
+      EditText inputN = ViewBindings.findChildViewById(rootView, id);
+      if (inputN == null) {
+        break missingId;
+      }
+
+      return new ActivityMainBinding((ConstraintLayout) rootView, createGraphBtn,
+          fragmentContainerViewTag, inputK, inputN);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

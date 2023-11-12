@@ -1,36 +1,47 @@
 package com.example.petersengraph2.app.presentation
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.petersengraph2.databinding.ActivityMainBinding
-import com.example.petersengraph2.domain.entity.Edge
-import com.example.petersengraph2.domain.entity.Vertex
 import org.koin.androidx.viewmodel.ext.android.viewModel
-
 
 class MainActivity : AppCompatActivity() {
 
-    private val viewModel: MainActivityVM by viewModel()
-    private lateinit var petersenView: PetersenGraphView
+    private lateinit var binding: ActivityMainBinding
+    private val viewModel: GraphViewModel by viewModel()
+
+    private var n: Int = 0
+    private var k: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        initLiveDataObservers()
-        viewModel.execute()
-
-        petersenView = PetersenGraphView(this, viewModel.verticesLiveData.value!!, viewModel.edgeLiveData.value!!)
-        setContentView(petersenView)
+        initSetOnClickListeners()
     }
 
-    private fun initLiveDataObservers() {
-        viewModel.verticesLiveData.observe(this) { verticesSet ->
-            petersenView.verticesSet = verticesSet
-        }
+    private fun changeFragment(n: Int, k: Int) {
 
-        viewModel.edgeLiveData.observe(this) { edgeSet ->
-            petersenView.edgeSet = edgeSet
+        val bundle = Bundle()
+        bundle.putInt("N", n)
+        bundle.putInt("K", k)
+
+        val fragment = GraphFragment(viewModel)
+        fragment.arguments = bundle
+
+        supportFragmentManager.beginTransaction()
+            .replace(binding.fragmentContainerViewTag.id, fragment)
+            .commit()
+    }
+
+    private fun initSetOnClickListeners() {
+        binding.createGraphBtn.setOnClickListener {
+            val n = binding.inputN.text.toString().toInt()
+            val k = binding.inputK.text.toString().toInt()
+
+            viewModel.drawPetersenGraph(n, k)
+            changeFragment(n, k)
         }
     }
 }

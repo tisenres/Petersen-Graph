@@ -4,10 +4,16 @@ color black
 color white
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+id createGraphBtn
+id fragment_container_view_tag
+id inputK
+id inputN
 layout activity_main
+layout fragment_graph
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
+string hello_blank_fragment
 style Base.Theme.PetersenGraph2
 style Theme.PetersenGraph2
 xml backup_rules

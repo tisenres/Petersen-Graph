@@ -3173,6 +3173,7 @@ int id coordinator 0x7f080081
 int id cos 0x7f080082
 int id counterclockwise 0x7f080083
 int id cradle 0x7f080084
+int id createGraphBtn 0x7f0801ef
 int id currentState 0x7f080085
 int id custom 0x7f080086
 int id customPanel 0x7f080087
@@ -3262,6 +3263,8 @@ int id immediateStop 0x7f0800da
 int id included 0x7f0800db
 int id indeterminate 0x7f0800dc
 int id info 0x7f0800dd
+int id inputK 0x7f0801f0
+int id inputN 0x7f0801f1
 int id invisible 0x7f0800de
 int id inward 0x7f0800df
 int id italic 0x7f0800e0
@@ -3665,6 +3668,7 @@ int layout design_navigation_menu 0x7f0b0029
 int layout design_navigation_menu_item 0x7f0b002a
 int layout design_text_input_end_icon 0x7f0b002b
 int layout design_text_input_start_icon 0x7f0b002c
+int layout fragment_graph 0x7f0b006a
 int layout m3_alert_dialog 0x7f0b002d
 int layout m3_alert_dialog_actions 0x7f0b002e
 int layout m3_alert_dialog_title 0x7f0b002f
@@ -3774,6 +3778,7 @@ int string error_icon_content_description 0x7f0f0029
 int string exposed_dropdown_menu_content_description 0x7f0f002a
 int string fab_transformation_scrim_behavior 0x7f0f002b
 int string fab_transformation_sheet_behavior 0x7f0f002c
+int string hello_blank_fragment 0x7f0f00a0
 int string hide_bottom_view_on_scroll_behavior 0x7f0f002d
 int string icon_content_description 0x7f0f002e
 int string item_view_role_description 0x7f0f002f

@@ -5,15 +5,13 @@ import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.view.View
-import com.example.petersengraph2.domain.entity.Edge
-import com.example.petersengraph2.domain.entity.Vertex
 import java.lang.Math.cos
 import java.lang.Math.sin
 
 class PetersenGraphView(
     context: Context,
-    var verticesSet: Set<Vertex>,
-    var edgeSet: Set<Edge>
+    var verticesSet: MutableList<Int>,
+    var edgeSet: MutableList<Pair<Int, Int>>
 ): View(context) {
 
     private val paint: Paint = Paint()

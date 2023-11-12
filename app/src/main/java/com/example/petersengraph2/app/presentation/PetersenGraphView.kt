@@ -11,11 +11,12 @@ import com.example.petersengraph2.domain.entity.Vertex
 
 class PetersenGraphView(
     context: Context,
-    private val verticesSet: Set<Vertex>,
-    private val edgeSet: Set<Edge>
+    var verticesSet: Set<Vertex>,
+    var edgeSet: Set<Edge>
 ): View(context) {
 
     private val paint: Paint = Paint()
+    private lateinit var canvas: Canvas
 
     init {
         paint.apply {
@@ -28,12 +29,13 @@ class PetersenGraphView(
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
+        this.canvas = canvas
 
-        drawPoints(canvas = canvas)
-        drawEdges(canvas = canvas)
+        drawPoints()
+        drawEdges()
     }
 
-    private fun drawPoints(canvas: Canvas) {
+    private fun drawPoints() {
         verticesSet.map { vertex ->
             Point(vertex.x * 100, vertex.y * 100)
         }.forEach { point ->
@@ -41,7 +43,7 @@ class PetersenGraphView(
         }
     }
 
-    private fun drawEdges(canvas: Canvas) {
+    private fun drawEdges() {
 
     }
 }

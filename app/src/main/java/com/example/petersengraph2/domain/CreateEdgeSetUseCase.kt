@@ -3,7 +3,7 @@ package com.example.petersengraph2.domain
 import com.example.petersengraph2.domain.entity.Edge
 import com.example.petersengraph2.domain.entity.Vertex
 
-class CreateEdgeSetUseCase() {
+class CreateEdgeSetUseCase {
 
     fun execute(verticesSet: Set<Vertex>): Set<Edge> {
         val edgeSet = mutableSetOf<Edge>()

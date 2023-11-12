@@ -15,29 +15,24 @@ class MainActivity : AppCompatActivity() {
     private val viewModel: MainActivityVM by viewModel()
     private lateinit var petersenView: PetersenGraphView
 
-    private var verticesSet: Set<Vertex> = emptySet()
-    private var edgeSet: Set<Edge> = emptySet()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 //        binding = ActivityMainBinding.inflate(layoutInflater)
 
-        initObservers()
+        initLiveDataObservers()
         viewModel.execute()
 
-        petersenView = PetersenGraphView(this, verticesSet, edgeSet)
+        petersenView = PetersenGraphView(this, viewModel.verticesLiveData.value!!, viewModel.edgeLiveData.value!!)
         setContentView(petersenView)
     }
 
-    private fun initObservers() {
+    private fun initLiveDataObservers() {
         viewModel.verticesLiveData.observe(this) { verticesSet ->
-            this.verticesSet = verticesSet
-            Log.d("gsdgsghsghdsd", verticesSet.toString())
+            petersenView.verticesSet = verticesSet
         }
 
         viewModel.edgeLiveData.observe(this) { edgeSet ->
-            this.edgeSet = edgeSet
-            Log.d("gsdgsghsghdsd", edgeSet.toString())
+            petersenView.edgeSet = edgeSet
         }
     }
 }

@@ -12,8 +12,8 @@ class MainActivityVM(
     private val createEdgeSetUseCase: CreateEdgeSetUseCase
 ): ViewModel() {
 
-    val verticesLiveData: MutableLiveData<Set<Vertex>> = MutableLiveData()
-    val edgeLiveData: MutableLiveData<Set<Edge>> = MutableLiveData()
+    val verticesLiveData = MutableLiveData<Set<Vertex>>()
+    val edgeLiveData = MutableLiveData<Set<Edge>>()
 
     fun execute() {
         initVerticesLiveData()
@@ -25,7 +25,8 @@ class MainActivityVM(
     }
 
     private fun initEdgeLiveData() {
-        edgeLiveData.value = createEdgeSetUseCase.execute(verticesSet = verticesLiveData.value!!)
+        edgeLiveData.value = verticesLiveData.value?.let { verticesSet ->
+            createEdgeSetUseCase.execute(verticesSet = verticesSet)
+        }
     }
-
 }

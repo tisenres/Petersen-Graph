@@ -11,13 +11,11 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {
 
-//    private lateinit var binding: ActivityMainBinding
     private val viewModel: MainActivityVM by viewModel()
     private lateinit var petersenView: PetersenGraphView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        binding = ActivityMainBinding.inflate(layoutInflater)
 
         initLiveDataObservers()
         viewModel.execute()

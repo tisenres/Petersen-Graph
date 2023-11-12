@@ -17,7 +17,6 @@ class PetersenGraphView(
 ): View(context) {
 
     private val paint: Paint = Paint()
-    private lateinit var canvas: Canvas
 
     init {
         paint.apply {
@@ -30,18 +29,12 @@ class PetersenGraphView(
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        this.canvas = canvas
-
-        drawPoints()
-        drawEdges()
-    }
-
-    private fun drawPoints() {
 
         val centerX = width / 2F
         val centerY = height / 2F
 
         drawPentagon(canvas, centerX, centerY, 100F)
+
     }
 
     private fun drawPentagon(canvas: Canvas, centerX: Float, centerY: Float, radius: Float) {
@@ -62,9 +55,5 @@ class PetersenGraphView(
         }
 
         canvas.drawLine(startX, startY, centerX + radius * cos(Math.toRadians(90.0)).toFloat(), centerY - radius * sin(Math.toRadians(90.0)).toFloat(), paint)
-    }
-
-    private fun drawEdges() {
-
     }
 }

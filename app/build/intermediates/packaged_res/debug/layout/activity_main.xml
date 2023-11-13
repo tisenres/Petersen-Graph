@@ -10,23 +10,51 @@
         android:id="@+id/fragment_container_view_tag"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/inputN"
+        app:layout_constraintBottom_toTopOf="@+id/inputNField"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
-    <EditText
-        android:id="@+id/inputN"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputNField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/inputK" />
+        app:layout_constraintBottom_toTopOf="@+id/inputKField"
+        android:hint="@string/inputN"
+        app:startIconDrawable="@drawable/baseline_search_24"
+        app:startIconContentDescription="@string/inputN"
+        android:padding="15dp"
+        >
 
-    <EditText
-        android:id="@+id/inputK"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputKField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/createGraphBtn"
-        tools:layout_editor_absoluteX="0dp" />
+        android:hint="@string/inputK"
+        app:startIconDrawable="@drawable/baseline_search_24"
+        app:startIconContentDescription="@string/inputN"
+        android:padding="15dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputK"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/createGraphBtn"

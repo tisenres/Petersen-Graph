@@ -44,7 +44,7 @@ dependencies {
     val lifecycleVersion = "2.6.2"
     val koinAndroidVersion = "3.1.2"
 
-    implementation("androidx.core:core-ktx:1.9.0")
+    implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
@@ -60,5 +60,7 @@ dependencies {
     implementation("io.insert-koin:koin-android:$koinAndroidVersion")
     implementation("io.insert-koin:koin-core:$koinAndroidVersion")
     implementation("io.insert-koin:koin-test:$koinAndroidVersion")
+
+    implementation("com.google.android.material:material:1.10.0")
 
 }

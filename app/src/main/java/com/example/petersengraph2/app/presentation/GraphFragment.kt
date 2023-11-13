@@ -15,13 +15,7 @@ class GraphFragment(private val viewModel: GraphViewModel) : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-//        val bundle = arguments
-//        bundle?.let {
-//            val n = bundle.getInt("N", 0)
-//            val k = bundle.getInt("K", 0)
-//        }
-
-        petersenView = PetersenGraphView(requireContext(), )
+        petersenView = PetersenGraphView(requireContext())
 
         initLiveDataObservers()
 
@@ -29,12 +23,14 @@ class GraphFragment(private val viewModel: GraphViewModel) : Fragment() {
     }
 
     private fun initLiveDataObservers() {
-        viewModel.verticesLiveData.observe(this) { verticesSet ->
+        viewModel.verticesLiveData.observe(viewLifecycleOwner) { verticesSet ->
             petersenView.verticesSet = verticesSet
+            petersenView.invalidate()
         }
 
-        viewModel.edgeLiveData.observe(this) { edgeSet ->
+        viewModel.edgeLiveData.observe(viewLifecycleOwner) { edgeSet ->
             petersenView.edgeSet = edgeSet
+            petersenView.invalidate()
         }
     }
 }

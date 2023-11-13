@@ -8,11 +8,10 @@ import android.view.View
 import java.lang.Math.cos
 import java.lang.Math.sin
 
-class PetersenGraphView(
-    context: Context,
-    var verticesSet: MutableList<Int>,
-    var edgeSet: MutableList<Pair<Int, Int>>
-): View(context) {
+class PetersenGraphView(context: Context): View(context) {
+
+    lateinit var verticesSet: MutableList<Int>
+    lateinit var edgeSet: MutableList<Pair<Int, Int>>
 
     private val paint: Paint = Paint()
 

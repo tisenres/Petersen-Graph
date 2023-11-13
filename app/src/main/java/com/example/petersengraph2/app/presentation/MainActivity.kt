@@ -18,21 +18,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        initSetOnClickListeners()
-    }
-
-    private fun changeFragment(n: Int, k: Int) {
-
-        val bundle = Bundle()
-        bundle.putInt("N", n)
-        bundle.putInt("K", k)
-
-        val fragment = GraphFragment(viewModel)
-        fragment.arguments = bundle
-
         supportFragmentManager.beginTransaction()
-            .replace(binding.fragmentContainerViewTag.id, fragment)
+            .replace(binding.fragmentContainerViewTag.id, GraphFragment(viewModel))
             .commit()
+
+        initSetOnClickListeners()
     }
 
     private fun initSetOnClickListeners() {
@@ -41,7 +31,6 @@ class MainActivity : AppCompatActivity() {
             val k = binding.inputK.text.toString().toInt()
 
             viewModel.drawPetersenGraph(n, k)
-            changeFragment(n, k)
         }
     }
 }

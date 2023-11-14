@@ -22,7 +22,6 @@ class PetersenGraphView @JvmOverloads constructor(
     var k = 0
 
     private val paint: Paint = Paint().apply {
-        color = 0xFF000000.toInt()
         strokeWidth = 5f
         isAntiAlias = true
     }

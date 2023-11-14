@@ -8,7 +8,6 @@ import com.example.petersengraph2.app.presentation.themes.Theme
 import com.example.petersengraph2.databinding.ActivityMainBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -21,13 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         initLiveDataObservers()
         initSetOnClickListeners()
-        binding.petersenView.setThemeForPaint(
-            if (resources.configuration.uiMode == Configuration.UI_MODE_NIGHT_NO) {
-                Theme.LIGHT
-            } else {
-                Theme.DARK
-            }
-        )
+        setThemeForPaint()
     }
 
     private fun initSetOnClickListeners() {
@@ -61,5 +54,15 @@ class MainActivity : AppCompatActivity() {
         viewModel.kLiveData.observe(this) { k ->
             binding.petersenView.k = k
         }
+    }
+
+    private fun setThemeForPaint() {
+        binding.petersenView.setThemeForPaint(
+            if (resources.configuration.uiMode == Configuration.UI_MODE_NIGHT_NO) {
+                Theme.LIGHT
+            } else {
+                Theme.DARK
+            }
+        )
     }
 }

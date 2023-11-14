@@ -3,6 +3,7 @@
     <color name="colorAccent">#6A578F</color>
     <color name="colorPrimary">#BBBABC</color>
     <color name="colorPrimaryDark">#505051</color>
+    <color name="white">#FFFFFF</color>
     <string name="app_name">Petersen Graph</string>
     <string name="create_a_graph">Create a graph</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -11,9 +12,11 @@
     <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">#6A3293</item>
     </style>
     <style name="AppTheme.Dark" parent="AppTheme">
         <item name="colorPrimary">@color/colorPrimaryDark</item>
         <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">#6A3293</item>
     </style>
 </resources>

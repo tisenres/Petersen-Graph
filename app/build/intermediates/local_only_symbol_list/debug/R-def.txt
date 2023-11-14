@@ -3,6 +3,7 @@ local
 color colorAccent
 color colorPrimary
 color colorPrimaryDark
+color white
 drawable baseline_search_24
 drawable ic_launcher_background
 drawable ic_launcher_foreground

@@ -2,55 +2,44 @@ package com.example.petersengraph2.app.presentation
 
 import android.content.Context
 import android.graphics.Canvas
-import android.graphics.Color
 import android.graphics.Paint
+import android.util.AttributeSet
 import android.view.View
 import java.lang.Math.cos
 import java.lang.Math.sin
 
-class PetersenGraphView(context: Context): View(context) {
+class PetersenGraphView @JvmOverloads constructor(
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyleAttr: Int = 0
+): View(context, attrs, defStyleAttr) {
 
-    lateinit var verticesSet: MutableList<Int>
-    lateinit var edgeSet: MutableList<Pair<Int, Int>>
+    var verticesSet: List<Int> = emptyList()
+    var edgeSet: List<Pair<Int, Int>> = emptyList()
+    var n = 0
+    var k = 0
 
-    private val paint: Paint = Paint()
-
-    init {
-        paint.apply {
-            color = Color.BLACK
-            strokeWidth = 10F
-            style = Paint.Style.FILL
-            isAntiAlias = true
-        }
+    private val paint: Paint = Paint().apply {
+        color = 0xFF000000.toInt()
+        strokeWidth = 5f
+        isAntiAlias = true
     }
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
 
-        val centerX = width / 2F
-        val centerY = height / 2F
+        val centerX = width / 2f
+        val centerY = height / 2f
+        val radius = centerX.coerceAtMost(centerY) - 10f
 
-        drawPentagon(canvas, centerX, centerY, 100F)
+        for ((start, end) in edgeSet) {
+            val startX = centerX + radius * cos(2 * Math.PI * start / n).toFloat()
+            val startY = centerY + radius * sin(2 * Math.PI * start / n).toFloat()
 
-    }
+            val endX = centerX + radius * cos(2 * Math.PI * end / n).toFloat()
+            val endY = centerY + radius * sin(2 * Math.PI * end / n).toFloat()
 
-    private fun drawPentagon(canvas: Canvas, centerX: Float, centerY: Float, radius: Float) {
-        val sides = 5
-        val angle = 360 / sides.toFloat()
-
-        var startX = centerX + radius * cos(Math.toRadians(90.0)).toFloat()
-        var startY = centerY - radius * sin(Math.toRadians(90.0)).toFloat()
-        canvas.drawPoint(startX, startY, paint)
-
-        for (i in 1 until sides) {
-            val x = centerX + radius * cos(Math.toRadians((90 + i * angle).toDouble())).toFloat()
-            val y = centerY - radius * sin(Math.toRadians((90 + i * angle).toDouble())).toFloat()
-            canvas.drawPoint(x, y, paint)
-            canvas.drawLine(startX, startY, x, y, paint)
-            startX = x
-            startY = y
+            canvas.drawLine(startX, startY, endX, endY, paint)
         }
-
-        canvas.drawLine(startX, startY, centerX + radius * cos(Math.toRadians(90.0)).toFloat(), centerY - radius * sin(Math.toRadians(90.0)).toFloat(), paint)
     }
 }

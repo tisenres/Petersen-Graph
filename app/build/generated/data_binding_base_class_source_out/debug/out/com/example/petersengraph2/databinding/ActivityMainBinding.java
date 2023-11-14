@@ -8,10 +8,10 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.fragment.app.FragmentContainerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.petersengraph2.R;
+import com.example.petersengraph2.app.presentation.PetersenGraphView;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import java.lang.NullPointerException;
@@ -26,9 +26,6 @@ public final class ActivityMainBinding implements ViewBinding {
   public final Button createGraphBtn;
 
   @NonNull
-  public final FragmentContainerView fragmentContainerViewTag;
-
-  @NonNull
   public final TextInputEditText inputK;
 
   @NonNull
@@ -40,17 +37,20 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final TextInputLayout inputNField;
 
+  @NonNull
+  public final PetersenGraphView petersenView;
+
   private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button createGraphBtn,
-      @NonNull FragmentContainerView fragmentContainerViewTag, @NonNull TextInputEditText inputK,
-      @NonNull TextInputLayout inputKField, @NonNull TextInputEditText inputN,
-      @NonNull TextInputLayout inputNField) {
+      @NonNull TextInputEditText inputK, @NonNull TextInputLayout inputKField,
+      @NonNull TextInputEditText inputN, @NonNull TextInputLayout inputNField,
+      @NonNull PetersenGraphView petersenView) {
     this.rootView = rootView;
     this.createGraphBtn = createGraphBtn;
-    this.fragmentContainerViewTag = fragmentContainerViewTag;
     this.inputK = inputK;
     this.inputKField = inputKField;
     this.inputN = inputN;
     this.inputNField = inputNField;
+    this.petersenView = petersenView;
   }
 
   @Override
@@ -86,12 +86,6 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.fragment_container_view_tag;
-      FragmentContainerView fragmentContainerViewTag = ViewBindings.findChildViewById(rootView, id);
-      if (fragmentContainerViewTag == null) {
-        break missingId;
-      }
-
       id = R.id.inputK;
       TextInputEditText inputK = ViewBindings.findChildViewById(rootView, id);
       if (inputK == null) {
@@ -116,8 +110,14 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, createGraphBtn,
-          fragmentContainerViewTag, inputK, inputKField, inputN, inputNField);
+      id = R.id.petersenView;
+      PetersenGraphView petersenView = ViewBindings.findChildViewById(rootView, id);
+      if (petersenView == null) {
+        break missingId;
+      }
+
+      return new ActivityMainBinding((ConstraintLayout) rootView, createGraphBtn, inputK,
+          inputKField, inputN, inputNField, petersenView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

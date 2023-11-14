@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".app.presentation.MainActivity">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragment_container_view_tag"
+    <com.example.petersengraph2.app.presentation.PetersenGraphView
+        android:id="@+id/petersenView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/inputNField"

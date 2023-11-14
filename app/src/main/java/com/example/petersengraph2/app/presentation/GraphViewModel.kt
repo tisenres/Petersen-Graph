@@ -10,6 +10,8 @@ class GraphViewModel(
 
     val verticesLiveData: MutableLiveData<MutableList<Int>> = MutableLiveData()
     val edgeLiveData: MutableLiveData<MutableList<Pair<Int, Int>>> = MutableLiveData()
+    val nLiveData: MutableLiveData<Int> = MutableLiveData()
+    val kLiveData: MutableLiveData<Int> = MutableLiveData()
 
     fun drawPetersenGraph(n: Int, k: Int) {
         val pair = createGeneralizedPetersenGraph.execute(n, k)
@@ -18,5 +20,7 @@ class GraphViewModel(
 
         verticesLiveData.value = vertices
         edgeLiveData.value = edges
+        nLiveData.value = n
+        kLiveData.value = k
     }
 }

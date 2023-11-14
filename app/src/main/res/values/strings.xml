@@ -4,4 +4,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="inputN">n</string>
     <string name="inputK">k</string>
+    <string name="create_a_graph">Create a graph</string>
 </resources>

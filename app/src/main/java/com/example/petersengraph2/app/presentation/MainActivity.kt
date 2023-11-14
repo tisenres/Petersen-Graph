@@ -57,12 +57,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setThemeForPaint() {
-        binding.petersenView.setThemeForPaint(
-            if (resources.configuration.uiMode == Configuration.UI_MODE_NIGHT_NO) {
-                Theme.LIGHT
-            } else {
-                Theme.DARK
-            }
-        )
+        when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
+            Configuration.UI_MODE_NIGHT_NO -> binding.petersenView.setThemeForPaint(Theme.LIGHT)
+            Configuration.UI_MODE_NIGHT_YES -> binding.petersenView.setThemeForPaint(Theme.DARK)
+            else -> binding.petersenView.setThemeForPaint(Theme.LIGHT)
+        }
     }
 }

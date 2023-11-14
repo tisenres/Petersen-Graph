@@ -1,4 +1,4 @@
-#Mon Nov 13 10:06:46 UZT 2023
+#Tue Nov 14 15:40:39 UZT 2023
 base.0=/Users/tisenres/AndroidStudioProjects/PetersenGraph2/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
 base.1=/Users/tisenres/AndroidStudioProjects/PetersenGraph2/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
 base.2=/Users/tisenres/AndroidStudioProjects/PetersenGraph2/app/build/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex

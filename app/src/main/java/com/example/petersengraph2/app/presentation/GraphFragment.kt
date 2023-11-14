@@ -13,10 +13,8 @@ class GraphFragment(private val viewModel: GraphViewModel) : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-
+    ): View {
         petersenView = PetersenGraphView(requireContext())
-
         initLiveDataObservers()
 
         return petersenView

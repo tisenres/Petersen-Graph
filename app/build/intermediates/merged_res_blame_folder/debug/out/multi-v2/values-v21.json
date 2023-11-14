@@ -4,7 +4,7 @@
             "outputFile": "com.example.petersengraph2.app-mergeDebugResources-35:/values-v21/values-v21.xml",
             "map": [
                 {
-                    "source": "/Users/tisenres/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/res/values-v21/values-v21.xml",
+                    "source": "/Users/tisenres/.gradle/caches/transforms-3/78dcbb7886a7084f048896d4d349572e/transformed/core-1.12.0/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",

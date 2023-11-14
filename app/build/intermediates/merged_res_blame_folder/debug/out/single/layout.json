@@ -1,11 +1,11 @@
 [
     {
-        "merged": "com.example.petersengraph2.app-mergeDebugResources-36:/layout/my_file.xml",
-        "source": "com.example.petersengraph2.app-main-39:/layout/my_file.xml"
-    },
-    {
         "merged": "/Users/tisenres/.gradle/daemon/8.0/com.example.petersengraph2.app-mergeDebugResources-36:/layout/activity_main.xml",
         "source": "/Users/tisenres/.gradle/daemon/8.0/com.example.petersengraph2.app-main-39:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.petersengraph2.app-mergeDebugResources-36:/layout/activity_main.xml",
+        "source": "com.example.petersengraph2.app-main-39:/layout/activity_main.xml"
     },
     {
         "merged": "/Users/tisenres/.gradle/daemon/8.0/com.example.petersengraph2.app-mergeDebugResources-36:/layout/fragment_graph.xml",

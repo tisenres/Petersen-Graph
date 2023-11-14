@@ -27,7 +27,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.PetersenGraph2" >
+        android:theme="@style/AppTheme.Dark" >
         <activity
             android:name="com.example.petersengraph2.app.presentation.MainActivity"
             android:exported="true" >

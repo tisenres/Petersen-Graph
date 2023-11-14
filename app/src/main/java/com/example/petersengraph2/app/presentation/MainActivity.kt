@@ -1,10 +1,13 @@
 package com.example.petersengraph2.app.presentation
 
+import android.content.res.Configuration
 import android.os.Bundle
-import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.petersengraph2.app.presentation.themes.Theme
 import com.example.petersengraph2.databinding.ActivityMainBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,23 +17,31 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        Log.d("SUDHSHDHSD","We are in activity")
         setContentView(binding.root)
 
         initLiveDataObservers()
         initSetOnClickListeners()
-
+        binding.petersenView.setThemeForPaint(
+            if (resources.configuration.uiMode == Configuration.UI_MODE_NIGHT_NO) {
+                Theme.LIGHT
+            } else {
+                Theme.DARK
+            }
+        )
     }
 
     private fun initSetOnClickListeners() {
         binding.createGraphBtn.setOnClickListener {
-            val n = binding.inputN.text.toString().toInt()
-            val k = binding.inputK.text.toString().toInt()
+            val n = binding.inputN.text.toString()
+            val k = binding.inputK.text.toString()
 
-            viewModel.drawPetersenGraph(n, k)
+            if (n.isNotBlank() && k.isNotBlank()) {
+                viewModel.drawPetersenGraph(n.toInt(), k.toInt())
+            } else {
+                Toast.makeText(this, "Enter the values", Toast.LENGTH_SHORT).show()
+            }
         }
     }
-
 
     private fun initLiveDataObservers() {
         viewModel.verticesLiveData.observe(this) { verticesSet ->

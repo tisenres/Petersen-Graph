@@ -1,7 +1,8 @@
 R_DEF: Internal format may change without notice
 local
-color black
-color white
+color colorAccent
+color colorPrimary
+color colorPrimaryDark
 drawable baseline_search_24
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -16,10 +17,12 @@ layout fragment_graph
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
+string create_a_graph
 string hello_blank_fragment
 string inputK
 string inputN
+style AppTheme
+style AppTheme.Dark
 style Base.Theme.PetersenGraph2
-style Theme.PetersenGraph2
 xml backup_rules
 xml data_extraction_rules

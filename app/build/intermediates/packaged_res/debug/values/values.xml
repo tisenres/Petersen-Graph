@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="colorAccent">#6A578F</color>
+    <color name="colorPrimary">#BBBABC</color>
+    <color name="colorPrimaryDark">#505051</color>
     <string name="app_name">Petersen Graph</string>
+    <string name="create_a_graph">Create a graph</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="inputK">k</string>
     <string name="inputN">n</string>
-    <style name="Base.Theme.PetersenGraph2" parent="Theme.Material3.DayNight.NoActionBar">
-        
-        
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     </style>
-    <style name="Theme.PetersenGraph2" parent="Base.Theme.PetersenGraph2"/>
+    <style name="AppTheme.Dark" parent="AppTheme">
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+    </style>
 </resources>

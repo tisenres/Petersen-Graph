@@ -14,6 +14,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="20dp"
         />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -64,7 +65,7 @@
         android:id="@+id/createGraphBtn"
         android:layout_width="200dp"
         android:layout_height="60dp"
-        android:text="Create a graph"
+        android:text="@string/create_a_graph"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -1352,7 +1352,6 @@ int color background_floating_material_dark 0x7f05001d
 int color background_floating_material_light 0x7f05001e
 int color background_material_dark 0x7f05001f
 int color background_material_light 0x7f050020
-int color black 0x7f050021
 int color bright_foreground_disabled_material_dark 0x7f050022
 int color bright_foreground_disabled_material_light 0x7f050023
 int color bright_foreground_inverse_material_dark 0x7f050024
@@ -1367,6 +1366,9 @@ int color cardview_dark_background 0x7f05002c
 int color cardview_light_background 0x7f05002d
 int color cardview_shadow_end_color 0x7f05002e
 int color cardview_shadow_start_color 0x7f05002f
+int color colorAccent 0x7f0502e9
+int color colorPrimary 0x7f0502ea
+int color colorPrimaryDark 0x7f0502eb
 int color design_bottom_navigation_shadow_color 0x7f050030
 int color design_box_stroke_color 0x7f050031
 int color design_dark_default_color_background 0x7f050032
@@ -2063,7 +2065,6 @@ int color switch_thumb_normal_material_dark 0x7f0502e4
 int color switch_thumb_normal_material_light 0x7f0502e5
 int color tooltip_background_dark 0x7f0502e6
 int color tooltip_background_light 0x7f0502e7
-int color white 0x7f0502e8
 int dimen abc_action_bar_content_inset_material 0x7f060000
 int dimen abc_action_bar_content_inset_with_nav 0x7f060001
 int dimen abc_action_bar_default_height_material 0x7f060002
@@ -3797,6 +3798,7 @@ int string character_counter_content_description 0x7f0f002b
 int string character_counter_overflowed_content_description 0x7f0f002c
 int string character_counter_pattern 0x7f0f002d
 int string clear_text_end_icon_content_description 0x7f0f002e
+int string create_a_graph 0x7f0f00aa
 int string error_a11y_label 0x7f0f002f
 int string error_icon_content_description 0x7f0f0030
 int string exposed_dropdown_menu_content_description 0x7f0f0031
@@ -3931,6 +3933,8 @@ int style Animation_Material3_SideSheetDialog 0x7f100007
 int style Animation_Material3_SideSheetDialog_Left 0x7f100008
 int style Animation_Material3_SideSheetDialog_Right 0x7f100009
 int style Animation_MaterialComponents_BottomSheetDialog 0x7f10000a
+int style AppTheme 0x7f10045d
+int style AppTheme_Dark 0x7f100461
 int style Base_AlertDialog_AppCompat 0x7f10000b
 int style Base_AlertDialog_AppCompat_Light 0x7f10000c
 int style Base_Animation_AppCompat_Dialog 0x7f10000d
@@ -4546,7 +4550,6 @@ int style Theme_MaterialComponents_Light_NoActionBar 0x7f10026e
 int style Theme_MaterialComponents_Light_NoActionBar_Bridge 0x7f10026f
 int style Theme_MaterialComponents_NoActionBar 0x7f100270
 int style Theme_MaterialComponents_NoActionBar_Bridge 0x7f100271
-int style Theme_PetersenGraph2 0x7f100272
 int style ThemeOverlay_AppCompat 0x7f100273
 int style ThemeOverlay_AppCompat_ActionBar 0x7f100274
 int style ThemeOverlay_AppCompat_Dark 0x7f100275

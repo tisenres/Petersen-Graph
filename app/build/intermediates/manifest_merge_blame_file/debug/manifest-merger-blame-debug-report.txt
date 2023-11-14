@@ -9,15 +9,15 @@
 9        android:targetSdkVersion="34" />
 10
 11    <permission
-11-->[androidx.core:core:1.9.0] /Users/tisenres/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+11-->[androidx.core:core:1.12.0] /Users/tisenres/.gradle/caches/transforms-3/78dcbb7886a7084f048896d4d349572e/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
 12        android:name="com.example.petersengraph2.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-12-->[androidx.core:core:1.9.0] /Users/tisenres/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+12-->[androidx.core:core:1.12.0] /Users/tisenres/.gradle/caches/transforms-3/78dcbb7886a7084f048896d4d349572e/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
 13        android:protectionLevel="signature" />
-13-->[androidx.core:core:1.9.0] /Users/tisenres/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+13-->[androidx.core:core:1.12.0] /Users/tisenres/.gradle/caches/transforms-3/78dcbb7886a7084f048896d4d349572e/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
 14
 15    <uses-permission android:name="com.example.petersengraph2.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-15-->[androidx.core:core:1.9.0] /Users/tisenres/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
-15-->[androidx.core:core:1.9.0] /Users/tisenres/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+15-->[androidx.core:core:1.12.0] /Users/tisenres/.gradle/caches/transforms-3/78dcbb7886a7084f048896d4d349572e/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+15-->[androidx.core:core:1.12.0] /Users/tisenres/.gradle/caches/transforms-3/78dcbb7886a7084f048896d4d349572e/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
 16
 17    <application
 17-->/Users/tisenres/AndroidStudioProjects/PetersenGraph2/app/src/main/AndroidManifest.xml:6:5-26:19
@@ -26,7 +26,7 @@
 19        android:allowBackup="true"
 19-->/Users/tisenres/AndroidStudioProjects/PetersenGraph2/app/src/main/AndroidManifest.xml:8:9-35
 20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-20-->[androidx.core:core:1.9.0] /Users/tisenres/.gradle/caches/transforms-3/43edc55df3b5c22b93aea8041b6b233a/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+20-->[androidx.core:core:1.12.0] /Users/tisenres/.gradle/caches/transforms-3/78dcbb7886a7084f048896d4d349572e/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
 21        android:dataExtractionRules="@xml/data_extraction_rules"
 21-->/Users/tisenres/AndroidStudioProjects/PetersenGraph2/app/src/main/AndroidManifest.xml:9:9-65
 22        android:debuggable="true"
@@ -42,8 +42,8 @@
 28        android:supportsRtl="true"
 28-->/Users/tisenres/AndroidStudioProjects/PetersenGraph2/app/src/main/AndroidManifest.xml:14:9-35
 29        android:testOnly="true"
-30        android:theme="@style/Theme.PetersenGraph2" >
-30-->/Users/tisenres/AndroidStudioProjects/PetersenGraph2/app/src/main/AndroidManifest.xml:15:9-52
+30        android:theme="@style/AppTheme.Dark" >
+30-->/Users/tisenres/AndroidStudioProjects/PetersenGraph2/app/src/main/AndroidManifest.xml:15:9-45
 31        <activity
 31-->/Users/tisenres/AndroidStudioProjects/PetersenGraph2/app/src/main/AndroidManifest.xml:17:9-25:20
 32            android:name="com.example.petersengraph2.app.presentation.MainActivity"

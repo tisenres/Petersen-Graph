@@ -2,9 +2,11 @@ package com.example.petersengraph2.app.presentation
 
 import android.content.Context
 import android.graphics.Canvas
+import android.graphics.Color
 import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.View
+import com.example.petersengraph2.app.presentation.themes.Theme
 import java.lang.Math.cos
 import java.lang.Math.sin
 
@@ -40,6 +42,14 @@ class PetersenGraphView @JvmOverloads constructor(
             val endY = centerY + radius * sin(2 * Math.PI * end / n).toFloat()
 
             canvas.drawLine(startX, startY, endX, endY, paint)
+        }
+    }
+
+    fun setThemeForPaint(theme: Theme) {
+        if (theme == Theme.LIGHT) {
+            paint.color = Color.BLACK
+        } else {
+            paint.color = Color.WHITE
         }
     }
 }

@@ -4,8 +4,8 @@
         "source": "/Users/tisenres/.gradle/daemon/8.0/com.example.petersengraph2.app-main-39:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "/Users/tisenres/.gradle/daemon/8.0/com.example.petersengraph2.app-merged_res-37:/layout_my_file.xml.flat",
-        "source": "/Users/tisenres/.gradle/daemon/8.0/com.example.petersengraph2.app-main-39:/layout/my_file.xml"
+        "merged": "com.example.petersengraph2.app-merged_res-37:/layout_activity_main.xml.flat",
+        "source": "com.example.petersengraph2.app-main-39:/layout/activity_main.xml"
     },
     {
         "merged": "/Users/tisenres/.gradle/daemon/8.0/com.example.petersengraph2.app-merged_res-37:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
